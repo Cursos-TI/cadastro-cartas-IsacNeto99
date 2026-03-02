@@ -11,7 +11,7 @@ int main() {
     char codigoDaCarta[3], nomeDaCidade[25];   //Código da Carta e Nome da Cidade
     int populacao, numeroDePontosTuristicos;    //População e Número de Pontos Turísticos
     float area, PIB;    //Área em Km² e Produto Interno Bruto
-    int dig = 26;  //número inteiro para o fgets
+    int dig = 25;  //número inteiro para o fgets
     // Área para entrada de dados
       printf("Insira abaixo a inicial do Estado (ex. de A até H):\n");    //Pergunta
       scanf(" %c", &estado);  //onde recebe a entrada
