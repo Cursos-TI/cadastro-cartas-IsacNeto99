@@ -12,6 +12,7 @@ int main() {
     int populacao, numeroDePontosTuristicos;    //População e Número de Pontos Turísticos
     float area, PIB;    //Área em Km² e Produto Interno Bruto
     int dig = 25;  //número inteiro para o fgets
+    float densidadePopulacional, pibPerCapita;
     // Área para entrada de dados
       printf("Insira abaixo a inicial do Estado (ex. de A até H):\n");    //Pergunta
       scanf(" %c", &estado);  //onde recebe a entrada
@@ -42,6 +43,10 @@ int main() {
       printf("Insira abaixo a Quantidade de Pontos Turísticos da Cidade:\n"); //Pergunta
       scanf("%d", &numeroDePontosTuristicos); //onde recebe a entrada
       printf("\n");   //apenas para pular uma linha da próxima pergunta
+
+      densidadePopulacional = (float) populacao / area;
+      pibPerCapita = (float) PIB / populacao;
+
   // Área para exibição dos dados da cidade
     printf("Estado: %c\n", estado); //imprime valor armazenado no estado
     printf("Código: %c%s\n", estado, codigoDaCarta);    //imprime os valores armazenados em estado + códigodacarta
@@ -50,5 +55,7 @@ int main() {
     printf("Área: %.2f km²\n", area); //imprime o valor armazenado em area e aplica formatação
     printf("PIB: %.2f\n", PIB); //imprime o valor armazenado em PIB
     printf("Número de Pontos Turísticos: %d\n", numeroDePontosTuristicos); //imprime o valor armazenado em numeroDePontosTuristicos
-return 0;
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita);
+    return 0;
 } 
